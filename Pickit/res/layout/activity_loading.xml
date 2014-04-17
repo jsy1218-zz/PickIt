@@ -1,0 +1,15 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+    <ImageView
+        android:contentDescription="loading image"
+        android:id="@+id/loadingImage"
+        android:src="@drawable/frontpage"
+        android:layout_width="match_parent"
+    	android:layout_height="match_parent"
+        />
+    
+</LinearLayout>
