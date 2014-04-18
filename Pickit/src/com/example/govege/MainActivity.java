@@ -1,12 +1,15 @@
 package com.example.govege;
 
 import pagefragment.MainPageFragment;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.view.PagerTabStrip;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBarActivity;
+import android.util.TypedValue;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -22,7 +25,15 @@ public class MainActivity extends ActionBarActivity {
 		super.onCreate(savedInstanceState);
 
 		setContentView(R.layout.activity_main);
-
+		
+		//set tab strip
+		final PagerTabStrip tabStrip = (PagerTabStrip) this.findViewById(R.id.tap_strip_title);
+		tabStrip.setDrawFullUnderline(false);
+		tabStrip.setTabIndicatorColor(Color.DKGRAY);
+		tabStrip.setBackgroundColor(Color.GRAY);
+		tabStrip.setNonPrimaryAlpha(0.5f);
+		tabStrip.setTextSpacing(25);
+		tabStrip.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 16);
 
 		// Create the adapter that will return a fragment for each of the three
 

@@ -37,7 +37,7 @@ public class LoadingActivity extends ActionBarActivity {
         @Override
         protected Void doInBackground(Void... arg0) {
         	try {
-				Thread.sleep(3000);
+				Thread.sleep(1500);
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
