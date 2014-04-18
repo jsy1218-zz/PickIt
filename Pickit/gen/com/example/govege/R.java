@@ -794,10 +794,11 @@ containing a value of this type.
         public static final int abc_split_action_bar_is_narrow=0x7f060002;
     }
     public static final class color {
-        public static final int abc_search_url_text_holo=0x7f070003;
+        public static final int abc_search_url_text_holo=0x7f070004;
         public static final int abc_search_url_text_normal=0x7f070000;
         public static final int abc_search_url_text_pressed=0x7f070002;
         public static final int abc_search_url_text_selected=0x7f070001;
+        public static final int green=0x7f070003;
     }
     public static final class dimen {
         /**  Default height of an action bar. 
@@ -983,6 +984,7 @@ containing a value of this type.
         public static final int abc_textfield_searchview_right_holo_light=0x7f020056;
         public static final int frontpage=0x7f020057;
         public static final int ic_launcher=0x7f020058;
+        public static final int magnifying_glass=0x7f020059;
     }
     public static final class id {
         public static final int action_bar=0x7f05001c;
@@ -1100,12 +1102,13 @@ containing a value of this type.
         public static final int abc_popup_menu_item_layout=0x7f030014;
         public static final int abc_search_dropdown_item_icons_2line=0x7f030015;
         public static final int abc_search_view=0x7f030016;
-        public static final int activity_loading=0x7f030017;
-        public static final int activity_main=0x7f030018;
-        public static final int fragment_loading=0x7f030019;
-        public static final int fragment_main=0x7f03001a;
-        public static final int main_fragment=0x7f03001b;
-        public static final int support_simple_spinner_dropdown_item=0x7f03001c;
+        public static final int actionbar_main_page=0x7f030017;
+        public static final int activity_loading=0x7f030018;
+        public static final int activity_main=0x7f030019;
+        public static final int fragment_loading=0x7f03001a;
+        public static final int fragment_main=0x7f03001b;
+        public static final int main_fragment=0x7f03001c;
+        public static final int support_simple_spinner_dropdown_item=0x7f03001d;
     }
     public static final class menu {
         public static final int loading=0x7f0c0000;

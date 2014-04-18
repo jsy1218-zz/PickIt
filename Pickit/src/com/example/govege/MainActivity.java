@@ -8,8 +8,10 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.PagerTabStrip;
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.util.TypedValue;
+import android.view.ViewGroup;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -24,15 +26,32 @@ public class MainActivity extends ActionBarActivity {
 
 		super.onCreate(savedInstanceState);
 
-		setContentView(R.layout.activity_main);
 		
+		
+		/***
+		 * Make custom actionbar with search jump 
+		 */
+		// inflate custon layout
+		//requestWindowFeature(Window.FEATURE_NO_TITLE);
+		//requestWindowFeature(Window.FEATURE_CUSTOM_TITLE);
+		final ViewGroup actionBarLayout = (ViewGroup) getLayoutInflater().
+				inflate(R.layout.actionbar_main_page, null);
+		final ActionBar actionBar = this.getSupportActionBar();
+		actionBar.setDisplayShowTitleEnabled(false);
+		actionBar.setDisplayShowHomeEnabled(false);
+		actionBar.setDisplayShowCustomEnabled(true);
+		actionBar.removeAllTabs();
+		actionBar.setCustomView(actionBarLayout);
+		
+		setContentView(R.layout.activity_main);
 		//set tab strip
 		final PagerTabStrip tabStrip = (PagerTabStrip) this.findViewById(R.id.tap_strip_title);
 		tabStrip.setDrawFullUnderline(false);
 		tabStrip.setTabIndicatorColor(Color.DKGRAY);
-		tabStrip.setBackgroundColor(Color.GRAY);
+		tabStrip.setBackgroundColor(Color.WHITE);
 		tabStrip.setNonPrimaryAlpha(0.5f);
 		tabStrip.setTextSpacing(25);
+		tabStrip.setTextColor(Color.BLACK);
 		tabStrip.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 16);
 
 		// Create the adapter that will return a fragment for each of the three
@@ -43,7 +62,7 @@ public class MainActivity extends ActionBarActivity {
 		// Set up the ViewPager with the sections adapter.
 		mViewPager = (ViewPager) findViewById(R.id.pager);
 		mViewPager.setAdapter(mSectionsPagerAdapter);
-
+		
 
 	}
 
