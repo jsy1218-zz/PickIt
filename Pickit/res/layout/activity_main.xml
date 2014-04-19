@@ -1,13 +1,62 @@
-<android.support.v4.view.ViewPager xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/pager"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.example.govege.MainActivity">
-    
-    <android.support.v4.view.PagerTabStrip
-        android:id="@+id/tap_strip_title"
-        android:layout_width = "match_parent"
-        android:layout_height = "wrap_content"
-        />
-</android.support.v4.view.ViewPager>
+    android:layout_height="wrap_content">
+
+    <RelativeLayout 
+	    android:layout_width="match_parent"
+	    android:id="@+id/search_relativeLayout"
+	    android:layout_height="45dp"
+	    android:gravity="center_vertical"
+	    android:background="@color/green"
+	    android:orientation="horizontal">	
+
+	    <ImageView 
+	        android:layout_alignParentLeft="true"
+	        android:id="@+id/im_actionbar"
+	        android:paddingLeft="15dp"
+	        android:layout_centerInParent="true"
+	        android:contentDescription="search image"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:src="@drawable/magnifying_glass"
+	        />
+	
+	    <TextView 
+	        android:layout_toRightOf="@id/im_actionbar"
+	        android:paddingLeft="15dp"
+	        android:layout_centerInParent="true"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="Searh Pickit..."
+	        android:textSize="20sp"
+	        android:textColor="#FFFFFF"
+	        />
+	
+	    <ProgressBar 
+	        android:layout_centerInParent="true"
+	        android:layout_alignParentRight="true"
+	        android:id="@+id/loading_title"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="right"
+	        />
+
+	</RelativeLayout>
+	 
+	<android.support.v4.view.ViewPager 
+	    android:id="@+id/pager"	
+	    android:layout_width="match_parent"	
+	    android:layout_height="match_parent"	
+	    tools:context="com.example.govege.MainActivity">
+
+	    <android.support.v4.view.PagerTabStrip
+	        android:id="@+id/tap_strip_title"
+	        android:layout_width = "match_parent"
+	        android:layout_height = "wrap_content"	
+	        />
+	</android.support.v4.view.ViewPager>
+
+</LinearLayout>

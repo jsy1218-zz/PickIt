@@ -1,6 +1,7 @@
 package com.example.govege;
 
 import pagefragment.MainPageFragment;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -11,7 +12,10 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.util.TypedValue;
+import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.widget.RelativeLayout;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -37,11 +41,13 @@ public class MainActivity extends ActionBarActivity {
 		final ViewGroup actionBarLayout = (ViewGroup) getLayoutInflater().
 				inflate(R.layout.actionbar_main_page, null);
 		final ActionBar actionBar = this.getSupportActionBar();
+		/* save actionbar for later use
 		actionBar.setDisplayShowTitleEnabled(false);
 		actionBar.setDisplayShowHomeEnabled(false);
 		actionBar.setDisplayShowCustomEnabled(true);
-		actionBar.removeAllTabs();
 		actionBar.setCustomView(actionBarLayout);
+		*/
+		actionBar.hide();
 		
 		setContentView(R.layout.activity_main);
 		//set tab strip
@@ -63,7 +69,24 @@ public class MainActivity extends ActionBarActivity {
 		mViewPager = (ViewPager) findViewById(R.id.pager);
 		mViewPager.setAdapter(mSectionsPagerAdapter);
 		
+		RelativeLayout search = (RelativeLayout) this.findViewById(R.id.search_relativeLayout);
+		search.setOnClickListener(new OnClickListener(){
 
+			@Override
+			public void onClick(View arg0) {
+				// TODO Auto-generated method stub
+				goToSearchPage();
+			}
+			
+		});
+		
+		
+
+	}
+	
+	private void goToSearchPage(){
+		Intent i = new Intent(this, SearchActivity.class);
+		this.startActivity(i);
 	}
 
 	/**
