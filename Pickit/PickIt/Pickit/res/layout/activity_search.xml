@@ -1,0 +1,63 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent">
+
+    <RelativeLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="45dp"
+	    android:gravity="center_vertical"
+	    android:background="@color/green"
+	    android:orientation="horizontal">	
+
+	    
+	
+	    <EditText 
+	        android:id ="@+id/et_search"
+	        android:paddingLeft="45dp"
+	        android:layout_alignParentLeft="true"
+	        android:layout_centerInParent="true"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:hint="Searh Pickit..."
+	        android:textColorHint="#dbdbdb"
+	        android:textCursorDrawable="@null"
+	        android:textSize="20sp"
+	        android:textColor="#FFFFFF"
+	        />
+		<ImageView 
+	        android:layout_alignLeft="@id/et_search"
+	        android:id="@+id/iv_search"
+	        android:paddingLeft="15dp"
+	        android:layout_centerInParent="true"
+	        android:contentDescription="search image"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:src="@drawable/magnifying_glass"
+	        />
+		<ImageView 
+	        android:layout_alignRight="@id/et_search"
+	        android:id="@+id/iv_clearText"
+	        android:paddingRight="15dp"
+	        android:paddingLeft="15dp"
+	        android:layout_centerInParent="true"
+	        android:contentDescription="clear text"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:src="@drawable/cross"
+	        />
+
+	</RelativeLayout>
+
+    <RelativeLayout 
+        android:id="@+id/search_back"
+        android:clickable="true"
+	    android:layout_width="match_parent"
+	    android:layout_height="fill_parent"
+	    android:gravity="center_vertical"
+	    android:orientation="horizontal">	
+
+	</RelativeLayout>
+</LinearLayout>
