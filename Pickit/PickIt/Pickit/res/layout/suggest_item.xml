@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp"
+    android:layout_marginBottom="20dp"
+    android:background="@drawable/background_shape"
+    android:orientation="vertical" >
+	
+    <ImageView
+        android:id="@+id/suggest_list_pic"
+        android:layout_width="match_parent"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp"
+        android:layout_height="300dp"
+        android:src="@drawable/ic_launcher" />
+
+    <LinearLayout
+        android:orientation="horizontal" 
+        android:layout_width="match_parent"
+    	android:layout_height="wrap_content">
+    	
+        <TextView 
+            android:id="@+id/tv_suggest_item_price"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textSize="24dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:textStyle="bold"
+            android:textColor="#458B00"
+    		android:layout_height="wrap_content"
+    		android:text="PRICE"
+            />
+        <LinearLayout
+            android:orientation="vertical"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+    		android:layout_height="wrap_content"> 
+	        <TextView 
+	            android:layout_width="wrap_content"
+	    		android:layout_height="wrap_content"
+	    		android:text="AMOUNT"
+	            />
+	        <TextView 
+	            android:id="@+id/tv_suggest_item_amount"
+	            android:layout_width="wrap_content"
+	    		android:layout_height="wrap_content"
+	    		android:text="AMOUNT"
+	            />
+        </LinearLayout>
+        
+    </LinearLayout>
+
+</LinearLayout>

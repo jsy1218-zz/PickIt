@@ -1,0 +1,10 @@
+
+# pull resporitory
+git pull origin master
+
+git add $filename
+
+git commit -m ¡°$message¡±
+
+git push origin master
+

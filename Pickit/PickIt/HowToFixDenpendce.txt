@@ -1,0 +1,10 @@
+1. Add android-support-v7-appcompat project from /sdk/extras/android/support/v7/appcompat
+
+2. in libs folder right click each jar file select Build Path -> add to path
+
+3. Import your project
+
+4. right click your project and select properties -> Android, check the libaray you need. 
+
+
+DONE!
