@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:orientation="vertical">
+    <!--android:background="@drawable/background_shape">-->
+
+    <RelativeLayout
+        android:id="@+id/suggest_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/suggest_list_pic"
+            android:layout_width="fill_parent"
+            android:layout_height="120dp"
+            android:layout_alignParentLeft="true"
+            android:adjustViewBounds="false"
+            android:src="@drawable/cucumber" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/btn_buy"
+            android:layout_alignTop="@+id/unit"
+            android:text="产地:"
+            android:textSize="10sp"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:id="@+id/unit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tv_suggest_item_price"
+            android:layout_marginRight="46dp"
+            android:layout_toLeftOf="@+id/textView1"
+            android:layout_weight="1"
+            android:text="元/斤"
+            android:textColor="#ffffff"
+            android:textSize="10sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_suggest_item_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tv_suggest_list_item_name"
+            android:layout_below="@+id/tv_suggest_list_item_name"
+            android:layout_marginTop="64dp"
+            android:layout_weight="1"
+            android:text="价格"
+            android:textColor="#ffcc66"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_suggest_item_source"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView1"
+            android:layout_alignBottom="@+id/textView1"
+            android:layout_alignRight="@+id/suggest_list_pic"
+            android:layout_marginRight="76dp"
+            android:text="广东"
+            android:textColor="#ffffff"
+            android:textSize="10sp" />
+
+        <ImageButton
+            android:id="@+id/btn_buy"
+            android:src="@drawable/buy"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignRight="@+id/tv_suggest_item_source"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_suggest_list_item_name"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/unit"
+            android:layout_centerVertical="true"
+            android:layout_weight="1"
+            android:text="菜名"
+            android:textColor="#ffcc66"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+</LinearLayout>
